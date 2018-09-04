@@ -50,7 +50,7 @@
 <meta property="og:image" content="http://oc78wb8cz.bkt.clouddn.com/1536071005118.jpg">
 <meta property="og:image" content="http://oc78wb8cz.bkt.clouddn.com/1536070047935.jpg">
 <meta property="og:image" content="http://oc78wb8cz.bkt.clouddn.com/089FAE2C918CD0DCAAAD0FA5F201269E.jpg">
-<meta property="og:updated_time" content="2018-09-04T14:23:33.000Z">
+<meta property="og:updated_time" content="2018-09-04T14:26:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="com_xml">
 <meta name="twitter:image" content="http://oc78wb8cz.bkt.clouddn.com/IMG_20180904_211723.jpg">
@@ -446,9 +446,21 @@
 
 
 <h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p>
-<p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script></p>
-<p><script><br>    var ivaInstance = new Iva(‘ivaLive’, {<br>        appkey: ‘By9WGzBIx’, //应用标示<br>        video: ‘<a href="http://oc78wb8cz.bkt.clouddn.com/COM%E5%8A%AB%E6%8C%81.mp4&#39;">http://oc78wb8cz.bkt.clouddn.com/COM%E5%8A%AB%E6%8C%81.mp4&#39;</a>, //视频<br>        title: ‘test’, //视频标题，后台视频管理中的标题<br>        cover: ‘’ //视频封面，只有在autoplay:false才可生效<br>    });<br></script></p>
-<p><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><br><a href="https://github.com/3gstudent/COM-Object-hijacking" target="_blank" rel="noopener">https://github.com/3gstudent/COM-Object-hijacking</a></p>
+<script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script>
+<script>
+    var ivaInstance = new Iva('ivaLive', {
+        appkey: 'By9WGzBIx', //应用标示
+        video: 'http://oc78wb8cz.bkt.clouddn.com/COM%E5%8A%AB%E6%8C%81.mp4', //视频
+        title: 'test', //视频标题，后台视频管理中的标题
+        cover: '' //视频封面，只有在autoplay:false才可生效
+    });
+</script>
+<script src="//cytroncdn.videojj.com/latest/Iva.js"></script>
+
+
+
+
+<p><a href="https://github.com/3gstudent/COM-Object-hijacking" target="_blank" rel="noopener">https://github.com/3gstudent/COM-Object-hijacking</a></p>
 <p>不知不觉这条安全道路走快两年了，这博客记录我的学习记录，加油！</p>
 <p>payload 加密</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\demon&gt; powershell -ExecutionPolicy Bypass -File <span class="string">"C:\Users\demon\Desktop\COM Object hijacking persistence.ps1</span></span><br><span class="line"><span class="string">"</span></span><br><span class="line">[*] Searching Folder...</span><br><span class="line">[+] Create Folder:  C:\Users\demon\AppData\Roaming\Microsoft\Installer\</span><br><span class="line">[+] Create Folder:  C:\Users\demon\AppData\Roaming\Microsoft\Installer\&#123;BCDE0395-E52F-<span class="number">467</span>C-<span class="number">8</span>E3D-C4579291692E&#125;</span><br><span class="line">[*] Detecting operating system...</span><br><span class="line">[+] OS: x64</span><br><span class="line">[*] Releasing file...</span><br><span class="line">[+] Done.</span><br><span class="line">[*] Modifying registry...</span><br><span class="line">[*] <span class="number">64</span>-bit:</span><br><span class="line">[*] <span class="number">32</span>-bit:</span><br><span class="line">[+] Done.</span><br><span class="line">PS C:\Users\demon&gt;</span><br></pre></td></tr></table></figure>
@@ -456,7 +468,7 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\demon&gt; <span class="variable">$fileContent</span> = [System<span class="selector-class">.IO</span><span class="selector-class">.File</span>]::ReadAllBytes(<span class="string">'C:\Users\demon\Desktop\calcmutex.dll'</span>)</span><br><span class="line">PS C:\Users\demon&gt; $fileContentEncoded = [System.Convert]::ToBase64String($fileContent)| set-content ("123.txt")</span><br></pre></td></tr></table></figure>
 <p><a href="http://www.4hou.com/technology/4958.html" target="_blank" rel="noopener">http://www.4hou.com/technology/4958.html</a><br><a href="https://github.com/3gstudent/test/blob/master/calcmutex.dll" target="_blank" rel="noopener">https://github.com/3gstudent/test/blob/master/calcmutex.dll</a></p>
 <p><img src="http://oc78wb8cz.bkt.clouddn.com/1536070047935.jpg" alt="enter description here"></p>
-<h2 id="xml-mimikatz"><a href="#xml-mimikatz" class="headerlink" title="xml_mimikatz"></a>xml_mimikatz</h2><p><a href="https://gist.github.com/caseysmithrc/b1190e023cd29c1910c01a164675a22e" target="_blank" rel="noopener">https://gist.github.com/caseysmithrc/b1190e023cd29c1910c01a164675a22e</a><br><img src="http://oc78wb8cz.bkt.clouddn.com/089FAE2C918CD0DCAAAD0FA5F201269E.jpg" alt="enter description here"></p>
+<p>2.xml_mimikatz<br><a href="https://gist.github.com/caseysmithrc/b1190e023cd29c1910c01a164675a22e" target="_blank" rel="noopener">https://gist.github.com/caseysmithrc/b1190e023cd29c1910c01a164675a22e</a><br><img src="http://oc78wb8cz.bkt.clouddn.com/089FAE2C918CD0DCAAAD0FA5F201269E.jpg" alt="enter description here"></p>
 </span>
       
     </div>
@@ -815,7 +827,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#视频演示："><span class="nav-number">1.</span> <span class="nav-text">视频演示：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xml-mimikatz"><span class="nav-number">2.</span> <span class="nav-text">xml_mimikatz</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#视频演示："><span class="nav-number">1.</span> <span class="nav-text">视频演示：</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
