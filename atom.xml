@@ -57,6 +57,24 @@
   </entry>
   
   <entry>
+    <title>linux_Sudo</title>
+    <link href="www.ggsec.cn/linux-Sudo.html"/>
+    <id>www.ggsec.cn/linux-Sudo.html</id>
+    <published>2018-09-09T04:15:01.000Z</published>
+    <updated>2018-09-09T04:16:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ojg8j426f.bkt.clouddn.com/4A5639C6FA9AEB5050270C566CE106AC.png" alt="enter description here"><br><a id="more"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ojg8j426f.bkt.clouddn.com/4A5639C6FA9AEB5050270C566CE106AC.png&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ShellPop</title>
     <link href="www.ggsec.cn/ShellPop.html"/>
     <id>www.ggsec.cn/ShellPop.html</id>
@@ -415,28 +433,6 @@
     
     
       <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>unicorn</title>
-    <link href="www.ggsec.cn/unicorn.html"/>
-    <id>www.ggsec.cn/unicorn.html</id>
-    <published>2018-03-29T14:58:25.000Z</published>
-    <updated>2018-07-01T06:41:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/A1AD5A55650233CB348CED3EDADABB20.jpg" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/unicorn.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><p><img src="http://oc78wb8cz.bkt.clouddn.com/E082C7CCF73ECE8B70821370D5F20497.jpg" alt="enter description here"></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/1576F05082484EC46728F8F7A14285A5.jpg" alt="enter description here"></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/FB04BA3559E021548BC7D695AC92E556.jpg" alt="enter description here"></p><p>独角兽是使用PowerShell降级攻击并直接将shellcode插入内存的简单工具。基于Matthew Graeber的PowerShell攻击和由David Kennedy（TrustedSec）和Josh Kelly在Defcon 18提供的PowerShell旁路技术。</p><p>用法很简单，只需运行Magic Unicorn（确保在使用Metasploit方法并在正确的路径中安装Metasploit），魔术独角兽会自动生成一个PowerShell命令，您只需将PowerShell代码剪切并粘贴到命令行窗口或通过有效载荷传送系统。独角兽支持你自己的shellcode，和Metasploit<br> Github: <a href="https://github.com/trustedsec/unicorn" target="_blank" rel="noopener">https://github.com/trustedsec/unicorn</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/A1AD5A55650233CB348CED3EDADABB20.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Metasploit" scheme="www.ggsec.cn/categories/Metasploit/"/>
-    
-    
-      <category term="Metasploit" scheme="www.ggsec.cn/tags/Metasploit/"/>
     
   </entry>
   
