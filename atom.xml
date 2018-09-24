@@ -57,6 +57,28 @@
   </entry>
   
   <entry>
+    <title>Invoke-Obfuscation</title>
+    <link href="www.ggsec.cn/Invoke-Obfuscation.html"/>
+    <id>www.ggsec.cn/Invoke-Obfuscation.html</id>
+    <published>2018-09-24T11:10:20.000Z</published>
+    <updated>2018-09-24T11:15:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/7CEE01B612EC999D80CA935044556386.jpg" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/Invoke-Obfuscation.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><p><img src="http://oc78wb8cz.bkt.clouddn.com/1537787487517.jpg" alt="enter description here"></p><p><a href="https://github.com/danielbohannon/Invoke-Obfuscation" target="_blank" rel="noopener">https://github.com/danielbohannon/Invoke-Obfuscation</a></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/650F50FBBD4AD6F9B8CAB7ED40739A52.jpg" alt="enter description here" title="650F50FBBD4AD6F9B8CAB7ED40739A52.jpg"><br>&nbsp;<br><img src="http://oc78wb8cz.bkt.clouddn.com/1E6A50AD0E8313871D54FA59E86A3C44.jpg" alt="enter description here"><br>&nbsp;<br><img src="http://oc78wb8cz.bkt.clouddn.com/7F7BEAC1C4C6AC8F3D2DE7A48F090C6B.jpg" alt="enter description here"><br>&nbsp;<br><img src="http://oc78wb8cz.bkt.clouddn.com/7186DD880F1602FB2089AA853C976538.jpg" alt="enter description here"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/7CEE01B612EC999D80CA935044556386.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="windows" scheme="www.ggsec.cn/categories/windows/"/>
+    
+    
+      <category term="windows" scheme="www.ggsec.cn/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SVG_ActiveX</title>
     <link href="www.ggsec.cn/SVG-ActiveX.html"/>
     <id>www.ggsec.cn/SVG-ActiveX.html</id>
@@ -404,28 +426,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/313B500D964093319BFFB928C47FB193.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="windows" scheme="www.ggsec.cn/categories/windows/"/>
-    
-    
-      <category term="windows" scheme="www.ggsec.cn/tags/windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>绕powershell限制</title>
-    <link href="www.ggsec.cn/bypass-powershell.html"/>
-    <id>www.ggsec.cn/bypass-powershell.html</id>
-    <published>2018-04-07T00:34:00.000Z</published>
-    <updated>2018-09-07T03:20:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/F42A816D2596AB46342A4C295A911DED.jpg" alt="enter description here"><br><a id="more"></a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set PSExecutionPolicyPreference=unrestricted</span><br></pre></td></tr></table></figure></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/5078C8C4581672DE05F79A238B0285F2.jpg" alt="enter description here"><br><a href="http://www.hexacorn.com/blog/2018/04/06/a-quick-note-about-psexecutionpolicypreference/" target="_blank" rel="noopener">http://www.hexacorn.com/blog/2018/04/06/a-quick-note-about-psexecutionpolicypreference/</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/F42A816D2596AB46342A4C295A911DED.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
     
     </summary>
     
