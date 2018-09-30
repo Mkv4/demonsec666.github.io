@@ -57,6 +57,28 @@
   </entry>
   
   <entry>
+    <title>stager_dll</title>
+    <link href="www.ggsec.cn/stager-dll.html"/>
+    <id>www.ggsec.cn/stager-dll.html</id>
+    <published>2018-09-30T18:33:18.000Z</published>
+    <updated>2018-09-30T18:40:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20181001_021846.jpg" alt="enter description here"><br><a id="more"></a></p><h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/stager_dll.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><p>感谢群友WBGlIl的帮助</p><p><img src="http://oc78wb8cz.bkt.clouddn.com/DC814A0D08E615E520600828011FAA23.jpg" alt="enter description here"></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/1538332573224.jpg" alt="enter description here"></p><p>bat<code>@echo offcall &quot;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat&quot;cl /LD /MT /EHa stager.cpp aes.cpp</code></p><p><a href="https://github.com/phackt/stager.dll" target="_blank" rel="noopener">https://github.com/phackt/stager.dll</a></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/1538332708687.jpg" alt="enter description here"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20181001_021846.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Metasploit" scheme="www.ggsec.cn/categories/Metasploit/"/>
+    
+    
+      <category term="Metasploit" scheme="www.ggsec.cn/tags/Metasploit/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AMSI_bypass</title>
     <link href="www.ggsec.cn/AMSI-bypass.html"/>
     <id>www.ggsec.cn/AMSI-bypass.html</id>
@@ -404,28 +426,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20180422_194348_01.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="www.ggsec.cn/categories/Windows/"/>
-    
-    
-      <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Invoke-Adversary</title>
-    <link href="www.ggsec.cn/Invoke-Adversary.html"/>
-    <id>www.ggsec.cn/Invoke-Adversary.html</id>
-    <published>2018-04-13T12:35:57.000Z</published>
-    <updated>2018-07-01T06:37:38.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20180413_204728.jpg" alt="enter description here"><br><a id="more"></a></p><p>Invoke-Adversary是一款PowerShell脚本，可帮助您根据检测高级持续性威胁的能力来评估安全产品和监控解决方案。</p><p><img src="http://oc78wb8cz.bkt.clouddn.com/IA11.png" alt="enter description here"></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/IA2.png" alt="enter description here"></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/IA3.png" alt="enter description here"></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/image210.png" alt="enter description here"></p><p>link: <a href="https://github.com/MotiBa/Invoke-Adversary/tree/master#invoke-adversary" target="_blank" rel="noopener">https://github.com/MotiBa/Invoke-Adversary/tree/master#invoke-adversary</a></p><p><a href="https://blogs.technet.microsoft.com/motiba/2018/04/09/invoke-adversary-simulating-adversary-operations/" target="_blank" rel="noopener">https://blogs.technet.microsoft.com/motiba/2018/04/09/invoke-adversary-simulating-adversary-operations/</a></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/EC239B8D525F3FEBE1C6010EEEC990B1.jpg" alt="enter description here"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20180413_204728.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
     
     </summary>
     
